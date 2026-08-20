@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Arduino Day 2026 Guatemala — 28 de agosto, Universidad Galileo. Keynote de David Cuartielles, talleres y charlas de IoT, IA y electrónica.">
+<meta name="author" content="Comunidad Arduino Guatemala">
+<meta property="og:title" content="Arduino Day 2026 — Guatemala">
+<meta property="og:description" content="28 de agosto de 2026 · Universidad Galileo, Zona 10 · Keynote de David Cuartielles">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/og-image.jpg">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<title>Arduino Day 2026 — Comunidad Arduino Guatemala</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-in">
+    <div class="nav-logo">Arduino Day <span>2026</span></div>
+    <div class="nav-links">
+      <a href="#keynote">Keynote</a>
+      <a href="#ponentes">Ponentes</a>
+      <a href="#agenda">Agenda</a>
+      <a href="#patrocinadores">Patrocinadores</a>
+      <a href="#lugar">Lugar</a>
+    </div>
+    <a class="nav-cta" href="https://forms.gle/d1HXAzyGk2G6MH4y5" target="_blank" rel="noopener">Inscribirme</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <span class="pill">28 de agosto · Guatemala</span>
+    <h1>Arduino Day 2026</h1>
+    <p class="sub">Comunidad Arduino Guatemala</p>
+    <p class="tag">Un día completo de tecnología, innovación y aprendizaje. Talleres, charlas y ponentes internacionales en la Universidad Galileo.</p>
+    <div class="hero-btns">
+      <a class="btn btn-solid" href="https://forms.gle/d1HXAzyGk2G6MH4y5" target="_blank" rel="noopener">Inscribirme al evento</a>
+      <a class="btn btn-ghost" href="#agenda">Ver la agenda</a>
+    </div>
+  </div>
+</header>
+
+<section id="info">
+  <div class="wrap">
+    <div class="datos">
+      <div class="dato"><div class="ico">📅</div><div class="lbl">Fecha</div><div class="val">28 agosto 2026</div></div>
+      <div class="dato"><div class="ico">🕐</div><div class="lbl">Horario</div><div class="val">8:00 – 17:30</div></div>
+      <div class="dato"><div class="ico">📍</div><div class="lbl">Sede</div><div class="val">Universidad Galileo</div></div>
+      <div class="dato"><div class="ico">🚗</div><div class="lbl">Parqueo</div><div class="val">Q40</div></div>
+    </div>
+    <div class="aviso"><strong>Parqueo:</strong> Q40 por todo el evento en Universidad Galileo, Zona 10, Ciudad de Guatemala.</div>
+  </div>
+</section>
+
+<section id="keynote">
+  <div class="wrap">
+    <div class="titulo"><span class="eyebrow">Charla inaugural</span><h2>Keynote</h2></div>
+    <div class="keynote">
+      <div class="foto"><img src="fotos/cuartielles.png" alt="David Cuartielles" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='Foto&lt;br&gt;David Cuartielles'"></div>
+      <div>
+        <h3>David Cuartielles</h3>
+        <div class="rol">Co-fundador de Arduino</div>
+        <p class="bio">David Cuartielles es ingeniero de sistemas embebidos y co-fundador de Arduino, la plataforma de hardware y software libre más popular del mundo para creadores, educadores e innovadores. Con más de dos décadas de experiencia en electrónica y tecnología, ha sido pionero en democratizar el acceso a la tecnología, permitiendo que millones de personas alrededor del mundo puedan crear y prototipar sus propias soluciones de hardware. Su visión ha transformado la industria del IoT, la educación STEM y la fabricación digital a nivel global.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ponentes">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Programa</span>
+      <h2>Ponentes y talleristas</h2>
+      <p>Expertos de Guatemala, México y Latinoamérica compartiendo conocimiento en IoT, inteligencia artificial, electrónica y robótica.</p>
+    </div>
+    <div class="ponentes" id="grid-ponentes"></div>
+  </div>
+</section>
+
+<section id="agenda">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">28 de agosto</span>
+      <h2>Agenda del día</h2>
+      <p>Tres espacios simultáneos: Laboratorio, Salón 1 y Salón 2. Elige tu ruta según tu nivel.</p>
+    </div>
+
+    <div class="leyenda">
+      <div><i style="background:var(--verde)"></i> Principiante</div>
+      <div><i style="background:var(--azul-nivel)"></i> Intermedio</div>
+    </div>
+    <p class="pista">Tocá o hacé clic en cualquier actividad para <b>ver la ficha del ponente</b>.</p>
+
+    <!-- ===== móvil ===== -->
+    <div class="agenda-movil">
+
+      <div class="talleres-movil">
+        <div class="rotulo">Talleres continuos · Laboratorio</div>
+        <button class="taller-card verde" data-p="damaris" data-h="10:00 – 13:00" data-s="Laboratorio">
+          <div class="tc-hora">10:00 – 13:00 · 3 horas</div>
+          <div class="tc-tit">Taller Introducción a Arduino</div>
+          <div class="tc-quien">Damaris Flores</div>
+        </button>
+        <button class="taller-card azul" data-p="giovanni" data-h="14:00 – 17:00" data-s="Laboratorio">
+          <div class="tc-hora">14:00 – 17:00 · 3 horas</div>
+          <div class="tc-tit">EchoGlow — Edge AI para productos</div>
+          <div class="tc-quien">Giovanni Salinas</div>
+        </button>
+      </div>
+
+      <div class="rotulo">Charlas por horario · Salones 1 y 2</div>
+
+      <div class="bloque full">
+        <div class="hora">8:00 – 9:00</div>
+        <div class="items"><div class="item neutro"><div class="act">Registro</div></div></div>
+      </div>
+
+      <div class="bloque full">
+        <div class="hora">9:00 – 10:00</div>
+        <div class="items">
+          <button class="item verde" data-p="cuartielles" data-h="9:00 – 10:00" data-s="Todas las salas"><div class="act">Keynote — David Cuartielles</div></button>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="hora">10:00 – 11:00</div>
+        <div class="items">
+          <button class="item azul" data-p="douglas" data-h="10:00 – 11:00" data-s="Salón 1"><div class="sala">Salón 1</div><div class="act">Micro Modelos de IA en un ESP32 — Douglas Lopez</div></button>
+          <button class="item verde" data-p="juan" data-h="10:00 – 11:00" data-s="Salón 2"><div class="sala">Salón 2</div><div class="act">Diseñando tu primer chip con herramientas libres — Juan Medrano</div></button>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="hora">11:00 – 12:00</div>
+        <div class="items">
+          <button class="item azul" data-p="jorge" data-h="11:00 – 12:00" data-s="Salón 1"><div class="sala">Salón 1</div><div class="act">Talk to Me, ESP32! ESP-NOW ha entrado al Chat! — Jorge Guajardo</div></button>
+          <button class="item neutro" data-p="cats" data-h="11:00 – 12:00" data-s="Salón 2"><div class="sala">Salón 2</div><div class="act">Electronic Cats México</div></button>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="hora">12:00 – 13:00</div>
+        <div class="items">
+          <button class="item azul" data-p="victor" data-h="12:00 – 13:00" data-s="Salón 1"><div class="sala">Salón 1</div><div class="act">Lumen Magna: primera supercomputadora de Guatemala — Victor Vargas</div></button>
+          <div class="item pendiente"><div class="sala">Salón 2</div><div class="act">Pendiente de confirmar</div></div>
+        </div>
+      </div>
+
+      <div class="bloque full">
+        <div class="hora">13:00 – 14:00</div>
+        <div class="items"><div class="item neutro"><div class="act">Almuerzo</div></div></div>
+      </div>
+
+      <div class="bloque">
+        <div class="hora">14:00 – 15:00</div>
+        <div class="items">
+          <button class="item verde" data-p="roberto" data-h="14:00 – 15:00" data-s="Salón 1"><div class="sala">Salón 1</div><div class="act">Del protoboard al servidor: tu propio centro de control — Roberto Catalán</div></button>
+          <button class="item verde" data-p="esdras" data-h="14:00 – 15:00" data-s="Salón 2"><div class="sala">Salón 2</div><div class="act">Arquitectura de sistemas IoT con Arduino y ESP32 — Esdras Abel Sapón Díaz</div></button>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="hora">15:00 – 16:00</div>
+        <div class="items">
+          <button class="item verde" data-p="aramy" data-h="15:00 – 16:00" data-s="Salón 1"><div class="sala">Salón 1</div><div class="act">Arduino y la industria — Aramy Escobar</div></button>
+          <button class="item azul" data-p="dennys" data-h="15:00 – 16:00" data-s="Salón 2"><div class="sala">Salón 2</div><div class="act">Cuando los sensores conocen los qubits — Dennys Tezén</div></button>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="hora">16:00 – 17:00</div>
+        <div class="items">
+          <button class="item verde" data-p="bagur" data-h="16:00 – 17:00" data-s="Salón 1"><div class="sala">Salón 1</div><div class="act">Programa Espacial QUETZAL — José Bagur</div></button>
+          <button class="item verde" data-p="pablo" data-h="16:00 – 17:00" data-s="Salón 2"><div class="sala">Salón 2</div><div class="act">Simulando Arduino en Velxio DEV — Pablo González</div></button>
+        </div>
+      </div>
+
+      <div class="bloque full">
+        <div class="hora">17:00 – 17:30</div>
+        <div class="items"><div class="item neutro"><div class="act">Cierre del evento</div></div></div>
+      </div>
+
+    </div>
+
+    <!-- ===== escritorio ===== -->
+    <div class="agenda-tabla">
+      <table>
+        <thead><tr><th class="th-hora">Hora</th><th>Laboratorio</th><th>Salón 1</th><th>Salón 2</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="hcol">8:00 – 9:00</td>
+            <td colspan="3" class="c-centro"><div class="celda">Registro</div></td>
+          </tr>
+          <tr>
+            <td class="hcol">9:00 – 10:00</td>
+            <td colspan="3" class="c-verde" data-p="cuartielles" data-h="9:00 – 10:00" data-s="Todas las salas" tabindex="0">
+              <div class="celda" style="text-align:center"><span class="celda-txt">Keynote — David Cuartielles</span></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="hcol">10:00 – 11:00</td>
+            <td rowspan="3" class="c-verde celda-larga" data-p="damaris" data-h="10:00 – 13:00" data-s="Laboratorio" tabindex="0">
+              <div class="celda"><span class="tag-continuo">3 horas continuas</span><span class="celda-txt">Taller Introducción a Arduino</span><span class="celda-sub">Damaris Flores</span></div>
+            </td>
+            <td class="c-azul" data-p="douglas" data-h="10:00 – 11:00" data-s="Salón 1" tabindex="0"><div class="celda"><span class="celda-txt">Micro Modelos de IA en un ESP32</span><span class="celda-sub">Douglas Lopez</span></div></td>
+            <td class="c-verde" data-p="juan" data-h="10:00 – 11:00" data-s="Salón 2" tabindex="0"><div class="celda"><span class="celda-txt">Diseñando tu primer chip con herramientas libres</span><span class="celda-sub">Juan Medrano</span></div></td>
+          </tr>
+          <tr>
+            <td class="hcol">11:00 – 12:00</td>
+            <td class="c-azul" data-p="jorge" data-h="11:00 – 12:00" data-s="Salón 1" tabindex="0"><div class="celda"><span class="celda-txt">Talk to Me, ESP32! ESP-NOW ha entrado al Chat!</span><span class="celda-sub">Jorge Guajardo</span></div></td>
+            <td class="c-centro" data-p="cats" data-h="11:00 – 12:00" data-s="Salón 2" tabindex="0"><div class="celda">Electronic Cats México</div></td>
+          </tr>
+          <tr>
+            <td class="hcol">12:00 – 13:00</td>
+            <td class="c-azul" data-p="victor" data-h="12:00 – 13:00" data-s="Salón 1" tabindex="0"><div class="celda"><span class="celda-txt">Lumen Magna: primera supercomputadora de Guatemala</span><span class="celda-sub">Victor Vargas</span></div></td>
+            <td class="c-pendiente"><div class="celda">Pendiente de confirmar</div></td>
+          </tr>
+          <tr>
+            <td class="hcol">13:00 – 14:00</td>
+            <td colspan="3" class="c-centro"><div class="celda">Almuerzo</div></td>
+          </tr>
+          <tr>
+            <td class="hcol">14:00 – 15:00</td>
+            <td rowspan="3" class="c-azul celda-larga" data-p="giovanni" data-h="14:00 – 17:00" data-s="Laboratorio" tabindex="0">
+              <div class="celda"><span class="tag-continuo">3 horas continuas</span><span class="celda-txt">EchoGlow — Edge AI para productos</span><span class="celda-sub">Giovanni Salinas</span></div>
+            </td>
+            <td class="c-verde" data-p="roberto" data-h="14:00 – 15:00" data-s="Salón 1" tabindex="0"><div class="celda"><span class="celda-txt">Del protoboard al servidor: tu propio centro de control</span><span class="celda-sub">Roberto Catalán</span></div></td>
+            <td class="c-verde" data-p="esdras" data-h="14:00 – 15:00" data-s="Salón 2" tabindex="0"><div class="celda"><span class="celda-txt">Arquitectura de sistemas IoT con Arduino y ESP32</span><span class="celda-sub">Esdras Abel Sapón Díaz</span></div></td>
+          </tr>
+          <tr>
+            <td class="hcol">15:00 – 16:00</td>
+            <td class="c-verde" data-p="aramy" data-h="15:00 – 16:00" data-s="Salón 1" tabindex="0"><div class="celda"><span class="celda-txt">Arduino y la industria</span><span class="celda-sub">Aramy Escobar</span></div></td>
+            <td class="c-azul" data-p="dennys" data-h="15:00 – 16:00" data-s="Salón 2" tabindex="0"><div class="celda"><span class="celda-txt">Cuando los sensores conocen los qubits</span><span class="celda-sub">Dennys Tezén</span></div></td>
+          </tr>
+          <tr>
+            <td class="hcol">16:00 – 17:00</td>
+            <td class="c-verde" data-p="bagur" data-h="16:00 – 17:00" data-s="Salón 1" tabindex="0"><div class="celda"><span class="celda-txt">Programa Espacial QUETZAL</span><span class="celda-sub">José Bagur</span></div></td>
+            <td class="c-verde" data-p="pablo" data-h="16:00 – 17:00" data-s="Salón 2" tabindex="0"><div class="celda"><span class="celda-txt">Simulando Arduino en Velxio DEV</span><span class="celda-sub">Pablo González</span></div></td>
+          </tr>
+          <tr>
+            <td class="hcol">17:00 – 17:30</td>
+            <td colspan="3" class="c-centro"><div class="celda">Cierre del evento</div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="guia">
+  <div class="wrap">
+    <div class="titulo"><span class="eyebrow">Cómo aprovecharlo</span><h2>¿Por dónde empezar?</h2></div>
+    <div class="guias">
+      <div class="guia"><h3>Si vas empezando</h3><p>Quédate en el Laboratorio con el Taller de Introducción a Arduino (10:00 – 13:00). Se ve paso a paso, sin conocimientos previos, y sales con tus primeros circuitos funcionando.</p></div>
+      <div class="guia"><h3>Si ya trasteas con hardware</h3><p>El Salón 1 concentra las charlas de nivel intermedio: modelos de IA en ESP32, comunicación ESP-NOW y supercómputo. Buen punto para dar el salto de proyecto personal a proyecto serio.</p></div>
+      <div class="guia"><h3>Si vienes por lo práctico</h3><p>El taller EchoGlow de Edge AI ocupa toda la tarde en el Laboratorio (14:00 – 17:00). Tres horas de trabajo aplicado llevando inteligencia artificial a productos reales.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="patrocinadores">
+  <div class="wrap">
+    <div class="titulo">
+      <span class="eyebrow">Gracias</span>
+      <h2>Patrocinadores</h2>
+      <p>Empresas y organizaciones que hacen posible Arduino Day 2026 Guatemala.</p>
+    </div>
+    <div class="patrocinadores" id="grid-patrocinadores"></div>
+  </div>
+</section>
+
+<section id="lugar">
+  <div class="wrap">
+    <div class="cierre">
+      <h2>Nos vemos el 28 de agosto</h2>
+      <p>Universidad Galileo, Zona 10, Ciudad de Guatemala. Parqueo Q40 por todo el día. Cupo limitado.</p>
+      <a class="btn btn-solid" href="https://forms.gle/d1HXAzyGk2G6MH4y5" target="_blank" rel="noopener">Inscribirme al evento</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="marca">Comunidad Arduino Guatemala</div>
+  <p>Fundada en 2012 por Oscar Leche · Liderada por Yeffri Salazar</p>
+  <p><a href="https://fb.com/arduinoguatemala" target="_blank" rel="noopener">fb.com/arduinoguatemala</a></p>
+  <p class="legal">© 2026 Arduino Day Guatemala · Universidad Galileo, Zona 10, Ciudad de Guatemala</p>
+</footer>
+
+<!-- ===== ficha del ponente ===== -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="ficha-titulo">
+  <div class="ficha" id="ficha">
+    <button class="ficha-cerrar" id="cerrar" aria-label="Cerrar ficha">✕</button>
+    <div class="ficha-foto" id="ficha-foto"></div>
+    <div class="ficha-cuerpo">
+      <div class="ficha-meta" id="ficha-meta"></div>
+      <h3 id="ficha-titulo"></h3>
+      <div class="quien" id="ficha-quien"></div>
+      <div class="org" id="ficha-org"></div>
+      <p class="desc" id="ficha-desc"></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js" defer></script>
+
+</body>
+</html>
