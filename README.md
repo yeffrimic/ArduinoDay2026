@@ -1,64 +1,55 @@
 # Arduino Day 2026 — Guatemala
 
-Landing page del evento (28 de agosto, Universidad Galileo). Sitio estático, sin build ni dependencias.
+Landing page oficial de Arduino Day Guatemala 2026 — 28 de agosto, Universidad Galileo. Sitio estático de una sola página, sin build ni dependencias: HTML, CSS y JavaScript puro.
+
+## Contenido
+
+- Cuenta regresiva de datos clave del evento (fecha, horario, sede, parqueo)
+- Keynote de apertura
+- Tarjetas de ponentes y talleristas, con ficha modal por cada uno
+- Agenda del día por horario y sala (vista adaptada a móvil y a escritorio)
+- Sección de patrocinadores
+- Guía rápida de "por dónde empezar" según el perfil del asistente
 
 ## Estructura del proyecto
 
 ```
 arduinoday/
-├── index.html            # página principal
+├── index.html          # página principal
 ├── css/
-│   └── styles.css        # todos los estilos
+│   └── styles.css      # estilos (mobile-first)
 ├── js/
-│   └── main.js            # datos de ponentes/patrocinadores + interactividad (agenda, modal de ficha)
-├── fotos/                 # fotos de ponentes y del keynote
-├── patrocinadores/        # logos de patrocinadores (solo se muestran, sin ficha)
-└── img/                   # imágenes generales del sitio (og-image, favicon) — pendiente
+│   └── main.js          # datos de ponentes/patrocinadores + interactividad
+├── fotos/               # fotos de ponentes y del keynote
+├── patrocinadores/      # logos de patrocinadores
+└── img/                 # favicon y og-image
 ```
 
-## Ponentes (`fotos/`)
+## Editar contenido
 
-El nombre del archivo debe coincidir con el campo `foto` de cada ponente en `js/main.js`. En cuanto el archivo existe con ese nombre, aparece solo en la tarjeta y en la ficha — no hay que tocar código.
+Todo el contenido dinámico vive en un solo lugar: `js/main.js`.
 
-| Archivo | Ponente |
-|---|---|
-| `fotos/cuartielles.png` | David Cuartielles (keynote) |
-| `fotos/damaris.png` | Damaris Flores |
-| `fotos/giovanni.png` | Giovanni Salinas |
-| `fotos/douglas.png` | Douglas Lopez |
-| `fotos/jorge.jpg` | Jorge Guajardo |
-| `fotos/victor.jpg` | Victor Vargas |
-| `fotos/dennys.jpg` | Dennys Emmanuel Tezén Guerra |
-| `fotos/juan.png` | Fernando Medrano |
-| `fotos/esdras.jpg` | Esdras Abel Sapón Díaz |
-| `fotos/roberto.jpg` | Roberto Catalán |
-| `fotos/aramy.jpg` | Aramy Escobar |
-| `fotos/bagur.jpg` | José Bagur |
-| `fotos/pablo.jpg` | Pablo Roberto González Quelex |
-| `fotos/cats.png` | Electronic Cats |
+- **Ponentes, biografías y agenda**: objeto `PONENTES` y array `ORDEN`.
+- **Patrocinadores**: array `PATROCINADORES`.
+- **Estilos/colores**: variables en `:root` al inicio de `css/styles.css` (`--azul`, `--teal`, `--verde`, etc.).
+- **Textos fijos** (hero, footer, keynote, guías): directamente en `index.html`.
 
-Si un ponente todavía no tiene foto, no pasa nada: mientras el archivo no exista se muestra automáticamente un marcador "Foto · Nombre" en su lugar (no rompe el diseño).
+Agregar una foto de ponente o un logo de patrocinador es tan simple como poner el archivo en la carpeta correspondiente (`fotos/` o `patrocinadores/`) con el nombre que ya está referenciado en `js/main.js`.
 
-## Patrocinadores (`patrocinadores/`)
-
-Los logos solo se muestran (sin clic ni ficha). Para agregar uno: poné el archivo en `/patrocinadores` y agregá su nombre a la lista `PATROCINADORES` al inicio de `js/main.js`.
-
-## Pendiente
-
-- `img/og-image.jpg` (1200×630px) — vista previa al compartir el link en redes/WhatsApp
-- `img/favicon.png` (512×512px o 32×32px mínimo) — ícono de la pestaña del navegador
-
-## Cómo ver el sitio localmente
+## Ver el sitio localmente
 
 ```bash
-cd arduinoday
+git clone https://github.com/yeffrimic/ArduinoDay2026.git
+cd ArduinoDay2026
 python3 -m http.server 8000
 # abrir http://localhost:8000
 ```
 
-## Editar contenido (ponentes, agenda, textos)
+## Despliegue (GitHub Pages)
 
-- **Ponentes, biografías y agenda**: objeto `PONENTES` y array `ORDEN` en `js/main.js`.
-- **Patrocinadores**: array `PATROCINADORES` en `js/main.js`.
-- **Estilos/colores**: variables en `:root` al inicio de `css/styles.css` (`--azul`, `--teal`, `--verde`, etc.).
-- **Textos fijos (hero, footer, keynote, guías)**: directamente en `index.html`.
+El sitio no necesita build: **Settings → Pages → Deploy from a branch → `main` / `root`**. Cada push a `main` se refleja directo en producción.
+
+## Comunidad Arduino Guatemala
+
+Fundada en 2012 por Oscar Leche · Liderada por Yeffri Salazar
+[fb.com/arduinoguatemala](https://fb.com/arduinoguatemala)
