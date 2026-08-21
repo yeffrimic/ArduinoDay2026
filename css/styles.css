@@ -58,7 +58,7 @@ section{padding-block:3rem}
 .hero h1{font-size:var(--h1);font-weight:800;line-height:1.02;letter-spacing:-.035em;margin-bottom:.7rem}
 .hero .sub{font-size:clamp(1rem,3.4vw,1.4rem);font-weight:600;opacity:.97;margin-bottom:.4rem}
 .hero .tag{font-size:clamp(.85rem,2.6vw,1.05rem);opacity:.85;max-width:44ch;margin-inline:auto}
-.hero-btns{display:flex;flex-direction:column;gap:.7rem;margin-top:1.9rem}
+.hero-btns{display:flex;flex-direction:column;flex-wrap:wrap;gap:.7rem;margin-top:1.9rem}
 @media(min-width:600px){.hero{padding-block:5rem 4.5rem}.hero-btns{flex-direction:row;justify-content:center;align-items:center}}
 @media(min-width:900px){.hero{padding-block:7rem 6rem}}
 
@@ -68,6 +68,9 @@ section{padding-block:3rem}
 .btn-solid:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.22)}
 .btn-ghost{border:2px solid rgba(255,255,255,.55);color:#fff}
 .btn-ghost:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+.btn-whatsapp{background:#25D366;color:#fff;box-shadow:0 6px 22px rgba(0,0,0,.16);display:inline-flex;align-items:center;justify-content:center;gap:.5rem}
+.btn-whatsapp:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.22);background:#22c15e}
+.btn-whatsapp svg{width:20px;height:20px;flex-shrink:0}
 
 /* ---------- títulos ---------- */
 .titulo{text-align:center;margin-bottom:2.2rem}
