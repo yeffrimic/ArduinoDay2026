@@ -16,7 +16,7 @@ const PONENTES = {
   },
   giovanni:{
     nombre:"Giovanni Salinas", org:"Supplyframe – Siemens",
-    charla:"Taller: EchoGlow — Edge AI para productos", nivel:"taller", foto:"fotos/giovanni.png",
+    charla:"Taller: Edge AI y Arduino para el desarrollo de productos", nivel:"taller", foto:"fotos/giovanni.png",
     desc:"Taller práctico de tres horas sobre cómo llevar inteligencia artificial al borde (edge) dentro de productos reales, desde el prototipo hasta la implementación."
   },
   douglas:{
@@ -69,15 +69,30 @@ const PONENTES = {
     charla:"Simulando Arduino en Velxio DEV", nivel:"Principiante", foto:"fotos/pablo.jpg",
     desc:"Simular Arduino usando la herramienta Velxio DEV: simuladores de acceso abierto para todos, con enfoque práctico."
   },
+  alison:{
+    nombre:"Alison Gabriela Mejía Canto", org:"MuniTec",
+    charla:"MuniTec: Educación Tecnológica e Innovación", nivel:"Principiante", foto:"fotos/alison.jpg",
+    desc:"Espacio para compartir la información general de MuniTec y los cursos que ofrece. Además de contar los proyectos que se tienen con Arduino, como pueden ser: Robótica Móvil, Club de Robótica y desarrollo de proyectos de Electrónica Programable."
+  },
+  allan:{
+    nombre:"Allan Josué Xicará Cruz", org:"MuniTec",
+    charla:"MuniTec: Educación Tecnológica e Innovación", nivel:"Principiante", foto:"fotos/allan.jpg",
+    desc:"Espacio para compartir la información general de MuniTec y los cursos que ofrece. Además de contar los proyectos que se tienen con Arduino, como pueden ser: Robótica Móvil, Club de Robótica y desarrollo de proyectos de Electrónica Programable."
+  },
+  pablom:{
+    nombre:"Pablo José López Mazariegos", org:"TESLA LAB",
+    charla:"Arduino + LabVIEW = instrumentación virtual low cost", nivel:"Intermedio", foto:"fotos/pablom.png",
+    desc:"Convierte tu Arduino o ESP32 en un instrumento de laboratorio. Mide, controla y genera señales desde LabVIEW con hardware accesible y de bajo costo. Desde sensores y actuadores hasta ADC, DAC, PWM y generación de funciones, tú decides qué construir, qué medir y qué experimentar. Porque la instrumentación también puede ser accesible, flexible y divertida."
+  },
   cats:{
-    nombre:"Electronic Cats", org:"México",
-    charla:"Sesión invitada", nivel:"Invitado", foto:"fotos/cats.png",
-    desc:"Participación especial del equipo de Electronic Cats, referente latinoamericano en hardware libre y desarrollo de dispositivos abiertos."
+    nombre:"Eduardo Contreras", org:"Electronic Cats · México",
+    charla:"Del AVR al dragonWing, ¿y la comunidad?", nivel:"Principiante", foto:"fotos/cats.png",
+    desc:"Un recorrido desde el AVR hasta el dragonWing de la mano de Electronic Cats, referente latinoamericano en hardware libre, y el papel que juega la comunidad en el camino."
   }
 };
 
 /* orden en que se muestran las tarjetas */
-const ORDEN = ["damaris","giovanni","douglas","jorge","victor","dennys","juan","esdras","roberto","aramy","bagur","pablo","cats"];
+const ORDEN = ["damaris","giovanni","douglas","jorge","victor","dennys","juan","esdras","roberto","aramy","bagur","pablo","alison","allan","pablom","cats"];
 
 /* ---------- tarjetas de ponentes ---------- */
 function claseNivel(n){
@@ -185,7 +200,7 @@ document.addEventListener("click", function(e){
 document.addEventListener("keydown", function(e){
   if(e.key === "Escape" && overlay.classList.contains("abierto")){ cerrarFicha(); return; }
   if((e.key === "Enter" || e.key === " ")){
-    const celda = e.target.closest("td[data-p]");
+    const celda = e.target.closest("td[data-p],[data-p][tabindex]");
     if(celda){ e.preventDefault(); abrirFicha(celda.dataset.p, celda.dataset.h, celda.dataset.s); }
   }
 });

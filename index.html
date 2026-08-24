@@ -109,7 +109,7 @@
         </button>
         <button class="taller-card azul" data-p="giovanni" data-h="14:00 – 17:00" data-s="Laboratorio">
           <div class="tc-hora">14:00 – 17:00 · 3 horas</div>
-          <div class="tc-tit">EchoGlow — Edge AI para productos</div>
+          <div class="tc-tit">Edge AI y Arduino para el desarrollo de productos</div>
           <div class="tc-quien">Giovanni Salinas</div>
         </button>
       </div>
@@ -140,7 +140,7 @@
         <div class="hora">11:00 – 12:00</div>
         <div class="items">
           <button class="item azul" data-p="jorge" data-h="11:00 – 12:00" data-s="Salón 1"><div class="sala">Salón 1</div><div class="act">Talk to Me, ESP32! ESP-NOW ha entrado al Chat! — Jorge Guajardo</div></button>
-          <button class="item neutro" data-p="cats" data-h="11:00 – 12:00" data-s="Salón 2"><div class="sala">Salón 2</div><div class="act">Electronic Cats México</div></button>
+          <div class="item verde duo" data-p="alison" data-h="11:00 – 12:00" data-s="Salón 2" tabindex="0" role="button"><div class="sala">Salón 2</div><div class="act">MuniTec: Educación Tecnológica e Innovación</div><div class="duo-quien"><span class="duo-nombre" data-p="alison" data-h="11:00 – 12:00" data-s="Salón 2" tabindex="0" role="button">Alison Gabriela Mejía Canto ›</span><span class="duo-nombre" data-p="allan" data-h="11:00 – 12:00" data-s="Salón 2" tabindex="0" role="button">Allan Josué Xicará Cruz ›</span></div></div>
         </div>
       </div>
 
@@ -148,7 +148,8 @@
         <div class="hora">12:00 – 13:00</div>
         <div class="items">
           <button class="item azul" data-p="victor" data-h="12:00 – 13:00" data-s="Salón 1"><div class="sala">Salón 1</div><div class="act">Lumen Magna: primera supercomputadora de Guatemala — Victor Vargas</div></button>
-          <div class="item pendiente"><div class="sala">Salón 2</div><div class="act">Pendiente de confirmar</div></div>
+          <button class="item azul" data-p="pablom" data-h="12:00 – 12:30" data-s="Salón 2"><div class="sala">Salón 2 · 12:00 – 12:30</div><div class="act">Arduino + LabVIEW = instrumentación virtual low cost — Pablo José López Mazariegos</div></button>
+          <button class="item verde" data-p="cats" data-h="12:30 – 13:15" data-s="Salón 2"><div class="sala">Salón 2 · 12:30 – 13:15</div><div class="act">Del AVR al dragonWing, ¿y la comunidad? — Eduardo Contreras (Electronic Cats)</div></button>
         </div>
       </div>
 
@@ -214,12 +215,17 @@
           <tr>
             <td class="hcol">11:00 – 12:00</td>
             <td class="c-azul" data-p="jorge" data-h="11:00 – 12:00" data-s="Salón 1" tabindex="0"><div class="celda"><span class="celda-txt">Talk to Me, ESP32! ESP-NOW ha entrado al Chat!</span><span class="celda-sub">Jorge Guajardo</span></div></td>
-            <td class="c-centro" data-p="cats" data-h="11:00 – 12:00" data-s="Salón 2" tabindex="0"><div class="celda">Electronic Cats México</div></td>
+            <td class="c-verde" data-p="alison" data-h="11:00 – 12:00" data-s="Salón 2" tabindex="0"><div class="celda"><span class="celda-txt">MuniTec: Educación Tecnológica e Innovación</span><span class="celda-sub duo-quien"><span class="duo-nombre" data-p="alison" data-h="11:00 – 12:00" data-s="Salón 2" tabindex="0" role="button">Alison Gabriela Mejía Canto</span><span class="duo-sep">·</span><span class="duo-nombre" data-p="allan" data-h="11:00 – 12:00" data-s="Salón 2" tabindex="0" role="button">Allan Josué Xicará Cruz</span></span></div></td>
           </tr>
           <tr>
             <td class="hcol">12:00 – 13:00</td>
             <td class="c-azul" data-p="victor" data-h="12:00 – 13:00" data-s="Salón 1" tabindex="0"><div class="celda"><span class="celda-txt">Lumen Magna: primera supercomputadora de Guatemala</span><span class="celda-sub">Victor Vargas</span></div></td>
-            <td class="c-pendiente"><div class="celda">Pendiente de confirmar</div></td>
+            <td class="c-partida">
+              <div class="partida">
+                <div class="media c-azul" data-p="pablom" data-h="12:00 – 12:30" data-s="Salón 2" tabindex="0"><div class="celda"><span class="media-hora">12:00 – 12:30</span><span class="celda-txt">Arduino + LabVIEW = instrumentación virtual low cost</span><span class="celda-sub">Pablo José López Mazariegos · TESLA LAB</span></div></div>
+                <div class="media c-verde" data-p="cats" data-h="12:30 – 13:15" data-s="Salón 2" tabindex="0"><div class="celda"><span class="media-hora">12:30 – 13:15</span><span class="celda-txt">Del AVR al dragonWing, ¿y la comunidad?</span><span class="celda-sub">Eduardo Contreras · Electronic Cats</span></div></div>
+              </div>
+            </td>
           </tr>
           <tr>
             <td class="hcol">13:00 – 14:00</td>
@@ -228,7 +234,7 @@
           <tr>
             <td class="hcol">14:00 – 15:00</td>
             <td rowspan="3" class="c-azul celda-larga" data-p="giovanni" data-h="14:00 – 17:00" data-s="Laboratorio" tabindex="0">
-              <div class="celda"><span class="tag-continuo">3 horas continuas</span><span class="celda-txt">EchoGlow — Edge AI para productos</span><span class="celda-sub">Giovanni Salinas</span></div>
+              <div class="celda"><span class="tag-continuo">3 horas continuas</span><span class="celda-txt">Edge AI y Arduino para el desarrollo de productos</span><span class="celda-sub">Giovanni Salinas</span></div>
             </td>
             <td class="c-verde" data-p="roberto" data-h="14:00 – 15:00" data-s="Salón 1" tabindex="0"><div class="celda"><span class="celda-txt">Del protoboard al servidor: tu propio centro de control</span><span class="celda-sub">Roberto Catalán</span></div></td>
             <td class="c-verde" data-p="esdras" data-h="14:00 – 15:00" data-s="Salón 2" tabindex="0"><div class="celda"><span class="celda-txt">Arquitectura de sistemas IoT con Arduino y ESP32</span><span class="celda-sub">Esdras Abel Sapón Díaz</span></div></td>
@@ -259,7 +265,7 @@
     <div class="guias">
       <div class="guia"><h3>Si vas empezando</h3><p>Quédate en el Laboratorio con el Taller de Introducción a Arduino (10:00 – 13:00). Se ve paso a paso, sin conocimientos previos, y sales con tus primeros circuitos funcionando.</p></div>
       <div class="guia"><h3>Si ya trasteas con hardware</h3><p>El Salón 1 concentra las charlas de nivel intermedio: modelos de IA en ESP32, comunicación ESP-NOW y supercómputo. Buen punto para dar el salto de proyecto personal a proyecto serio.</p></div>
-      <div class="guia"><h3>Si vienes por lo práctico</h3><p>El taller EchoGlow de Edge AI ocupa toda la tarde en el Laboratorio (14:00 – 17:00). Tres horas de trabajo aplicado llevando inteligencia artificial a productos reales.</p></div>
+      <div class="guia"><h3>Si vienes por lo práctico</h3><p>El taller Edge AI y Arduino para el desarrollo de productos ocupa toda la tarde en el Laboratorio (14:00 – 17:00). Tres horas de trabajo aplicado llevando inteligencia artificial a productos reales.</p></div>
     </div>
   </div>
 </section>

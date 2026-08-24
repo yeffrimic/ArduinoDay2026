@@ -164,14 +164,13 @@ section{padding-block:3rem}
 @media(min-width:900px){.agenda-tabla{display:block;background:var(--card);border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);border:1px solid var(--linea)}}
 table{width:100%;border-collapse:collapse;font-size:.88rem}
 thead th{background:linear-gradient(135deg,var(--azul),var(--teal));color:#fff;padding:1rem .9rem;text-align:left;font-weight:700;font-size:.85rem}
-tbody td{padding:0;border-bottom:1px solid var(--linea);vertical-align:middle}
+tbody td{padding:0;border-bottom:1px solid var(--linea);vertical-align:top;height:1px}
 tbody tr:last-child td{border-bottom:none}
 .th-hora{width:118px}
 .hcol{font-weight:800;color:var(--azul);width:118px;white-space:nowrap;font-variant-numeric:tabular-nums;padding:.95rem .9rem!important;font-size:.84rem}
-.celda-larga .celda{height:100%;display:flex;flex-direction:column;justify-content:center}
 .tag-continuo{display:inline-block;align-self:flex-start;background:rgba(255,255,255,.25);font-size:.62rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:.22rem .55rem;border-radius:999px;margin-bottom:.45rem}
 .c-pendiente .celda{background:repeating-linear-gradient(135deg,#fafbfc,#fafbfc 9px,#f2f5f8 9px,#f2f5f8 18px);color:#98a2ae;font-style:italic;font-weight:500;text-align:center}
-.celda{padding:.95rem .9rem;line-height:1.45;min-height:100%}
+.celda{padding:.95rem .9rem;line-height:1.45;height:100%;min-height:74px;display:flex;flex-direction:column;justify-content:center}
 .celda-txt{display:block}
 .celda-sub{display:block;font-size:.72rem;opacity:.82;margin-top:.2rem;font-weight:500}
 .c-verde .celda{background:var(--verde);color:#fff;font-weight:600}
@@ -182,6 +181,27 @@ td[data-p] .celda{transition:filter .2s,transform .2s;position:relative}
 td[data-p]:hover .celda{filter:brightness(1.09)}
 td[data-p]:hover .celda::after{content:'Ver ponente ›';position:absolute;right:.7rem;bottom:.45rem;font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;opacity:.9}
 td[data-p]:focus-visible{outline:3px solid var(--azul);outline-offset:-3px}
+
+/* celda partida en dos medias horas (Salón 2, 12:00 – 13:15) */
+.c-partida{padding:0}
+.partida{height:100%;display:flex;flex-direction:column}
+.partida .media{flex:1;position:relative;cursor:pointer;min-height:0}
+.partida .media + .media{border-top:1px solid rgba(255,255,255,.5)}
+.partida .media .celda{transition:filter .2s;justify-content:center;min-height:0}
+.partida .media:hover .celda{filter:brightness(1.09)}
+.partida .media:focus-visible{outline:3px solid var(--azul);outline-offset:-3px}
+/* charla con dos ponentes: cada nombre abre su propia ficha */
+.duo-quien{display:flex;flex-wrap:wrap;gap:.15rem .45rem;align-items:baseline}
+.duo-nombre{cursor:pointer;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;transition:opacity .2s}
+.duo-nombre:hover{opacity:.75}
+.duo-nombre:focus-visible{outline:2px solid #fff;outline-offset:2px;border-radius:3px}
+.duo-sep{opacity:.6}
+.item.duo .duo-quien{margin-top:.35rem;font-size:.82rem;font-weight:600;color:var(--azul);flex-direction:column;gap:.25rem}
+.item.duo .duo-nombre{text-decoration:none}
+.item.duo{cursor:pointer}
+.item.duo::after{content:none}
+
+.media-hora{display:block;font-size:.66rem;font-weight:800;letter-spacing:.06em;opacity:.85;margin-bottom:.18rem;font-variant-numeric:tabular-nums}
 
 /* ---------- ficha modal ---------- */
 .overlay{
