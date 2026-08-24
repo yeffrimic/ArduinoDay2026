@@ -164,31 +164,34 @@ section{padding-block:3rem}
 @media(min-width:900px){.agenda-tabla{display:block;background:var(--card);border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);border:1px solid var(--linea)}}
 table{width:100%;border-collapse:collapse;font-size:.88rem}
 thead th{background:linear-gradient(135deg,var(--azul),var(--teal));color:#fff;padding:1rem .9rem;text-align:left;font-weight:700;font-size:.85rem}
-tbody td{padding:0;border-bottom:1px solid var(--linea);vertical-align:top;height:1px}
+tbody td{padding:0;border-bottom:1px solid var(--linea);vertical-align:middle}
 tbody tr:last-child td{border-bottom:none}
 .th-hora{width:118px}
 .hcol{font-weight:800;color:var(--azul);width:118px;white-space:nowrap;font-variant-numeric:tabular-nums;padding:.95rem .9rem!important;font-size:.84rem}
 .tag-continuo{display:inline-block;align-self:flex-start;background:rgba(255,255,255,.25);font-size:.62rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;padding:.22rem .55rem;border-radius:999px;margin-bottom:.45rem}
-.c-pendiente .celda{background:repeating-linear-gradient(135deg,#fafbfc,#fafbfc 9px,#f2f5f8 9px,#f2f5f8 18px);color:#98a2ae;font-style:italic;font-weight:500;text-align:center}
-.celda{padding:.95rem .9rem;line-height:1.45;height:100%;min-height:74px;display:flex;flex-direction:column;justify-content:center}
+.c-pendiente{background:repeating-linear-gradient(135deg,#fafbfc,#fafbfc 9px,#f2f5f8 9px,#f2f5f8 18px)}
+.c-pendiente .celda{color:#98a2ae;font-style:italic;font-weight:500;text-align:center}
+.celda{padding:.95rem .9rem;line-height:1.45;min-height:74px;display:flex;flex-direction:column;justify-content:center}
 .celda-txt{display:block}
 .celda-sub{display:block;font-size:.72rem;opacity:.82;margin-top:.2rem;font-weight:500}
-.c-verde .celda{background:var(--verde);color:#fff;font-weight:600}
-.c-azul .celda{background:var(--azul-nivel);color:#fff;font-weight:600}
+.c-verde{background:var(--verde);color:#fff}
+.c-verde .celda{font-weight:600}
+.c-azul{background:var(--azul-nivel);color:#fff}
+.c-azul .celda{font-weight:600}
 .c-centro .celda{text-align:center;font-weight:700;color:var(--texto-2)}
-td[data-p]{cursor:pointer;position:relative}
-td[data-p] .celda{transition:filter .2s,transform .2s;position:relative}
-td[data-p]:hover .celda{filter:brightness(1.09)}
+td[data-p]{cursor:pointer;position:relative;transition:filter .2s}
+td[data-p] .celda{position:relative}
+td[data-p]:hover{filter:brightness(1.09)}
 td[data-p]:hover .celda::after{content:'Ver ponente ›';position:absolute;right:.7rem;bottom:.45rem;font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;opacity:.9}
 td[data-p]:focus-visible{outline:3px solid var(--azul);outline-offset:-3px}
 
 /* celda partida en dos medias horas (Salón 2, 12:00 – 13:15) */
-.c-partida{padding:0}
+.c-partida{padding:0;background:var(--verde)}
 .partida{height:100%;display:flex;flex-direction:column}
-.partida .media{flex:1;position:relative;cursor:pointer;min-height:0}
+.partida .media{flex:1;position:relative;cursor:pointer;min-height:0;transition:filter .2s}
 .partida .media + .media{border-top:1px solid rgba(255,255,255,.5)}
-.partida .media .celda{transition:filter .2s;justify-content:center;min-height:0}
-.partida .media:hover .celda{filter:brightness(1.09)}
+.partida .media .celda{justify-content:center;min-height:0}
+.partida .media:hover{filter:brightness(1.09)}
 .partida .media:focus-visible{outline:3px solid var(--azul);outline-offset:-3px}
 /* charla con dos ponentes: cada nombre abre su propia ficha */
 .duo-quien{display:flex;flex-wrap:wrap;gap:.15rem .45rem;align-items:baseline}
