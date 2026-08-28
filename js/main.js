@@ -81,7 +81,7 @@ const PONENTES = {
   },
   pablom:{
     nombre:"Pablo José López Mazariegos", org:"TESLA LAB",
-    charla:"Arduino + LabVIEW = instrumentación virtual low cost", nivel:"Intermedio", foto:"fotos/pablom.png",
+    charla:"Arduino + LabVIEW = instrumentación virtual low cost", nivel:"Intermedio", foto:"fotos/pablom.jpeg",
     desc:"Convierte tu Arduino o ESP32 en un instrumento de laboratorio. Mide, controla y genera señales desde LabVIEW con hardware accesible y de bajo costo. Desde sensores y actuadores hasta ADC, DAC, PWM y generación de funciones, tú decides qué construir, qué medir y qué experimentar. Porque la instrumentación también puede ser accesible, flexible y divertida."
   },
   cats:{
@@ -138,6 +138,8 @@ const PATROCINADORES = [
    "5.png",
    "6.png",
    "7.png",
+   "8.jpeg",
+   "9.jpeg",
 ];
 
 const gridPatro = document.getElementById("grid-patrocinadores");
