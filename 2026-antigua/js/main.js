@@ -40,7 +40,7 @@ const AGENDA = [
     hora: "12:15",
     titulo: "Automatización de un gallinero",
     ponentes: [{ nombre: "Gerardo Waldemar Montejo Saucedo", foto: "img/gerardo.jpg" }],
-    resumen: "Un gallinero casero conectado a internet que da de comer y beber, desinfecta y recolecta huevos, con monitoreo para no tener que visitarlo hasta por dos días."
+    resumen: "Gallinero casero conectado a internet que automatiza la alimentación, hidratación, desinfección y recolección de huevos, con monitoreo remoto y autonomía de hasta 2 días sin intervención humana."
   },
   {
     hora: "12:45",
@@ -70,7 +70,7 @@ const AGENDA = [
     titulo: "Embedito95: TypeScript en microcontroladores",
     ponentes: [
       { nombre: "David Salvador Melara Lemus", foto: "img/david.jpg" },
-      { nombre: "José Velásquez" }
+      { nombre: "José Velásquez", foto: "img/jose.jpg" }
     ],
     resumen: "Un toolchain open source para programar microcontroladores con e95, un lenguaje tipo TypeScript que se transpila a C++. Con demo en vivo de multitarea en hardware sencillo.",
     enlace: { url: "https://github.com/davidsal/Embedito95", texto: "Repositorio en GitHub" }
