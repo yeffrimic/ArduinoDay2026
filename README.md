@@ -1,55 +1,43 @@
-# Arduino Day 2026 — Guatemala
+# Arduino Day Guatemala
 
-Landing page oficial de Arduino Day Guatemala 2026 — 28 de agosto, Universidad Galileo. Sitio estático de una sola página, sin build ni dependencias: HTML, CSS y JavaScript puro.
+Sitios de todas las ediciones de Arduino Day que organiza Comunidad Arduino Guatemala. Sitio estático para GitHub Pages, sin build ni dependencias: HTML, CSS y JavaScript puro.
 
-## Contenido
-
-- Cuenta regresiva de datos clave del evento (fecha, horario, sede, parqueo)
-- Keynote de apertura
-- Tarjetas de ponentes y talleristas, con ficha modal por cada uno
-- Agenda del día por horario y sala (vista adaptada a móvil y a escritorio)
-- Sección de patrocinadores
-- Guía rápida de "por dónde empezar" según el perfil del asistente
-
-## Estructura del proyecto
+## Estructura
 
 ```
-arduinoday/
-├── index.html          # página principal
-├── css/
-│   └── styles.css      # estilos (mobile-first)
-├── js/
-│   └── main.js          # datos de ponentes/patrocinadores + interactividad
-├── fotos/               # fotos de ponentes y del keynote
-├── patrocinadores/      # logos de patrocinadores
-└── img/                 # favicon y og-image
+/
+├── index.html          # portada general: próxima edición + lista de todas las ediciones
+├── assets/             # imágenes de la portada (franja AD21, infinito, logo de la comunidad)
+├── 2026-capital/       # Arduino Day 2026 · Ciudad de Guatemala (28 ago, Universidad Galileo)
+└── 2026-antigua/       # Arduino Day 2026 · Antigua Guatemala (27 nov, Porta Hotel Antigua)
 ```
 
-## Editar contenido
+Cada carpeta de edición es independiente: tiene su propio `index.html`, estilos, scripts e imágenes, y solo usa rutas relativas. Las URLs quedan así:
 
-Todo el contenido dinámico vive en un solo lugar: `js/main.js`.
+- `/` → portada Arduino Day Guatemala
+- `/2026-capital/` → edición capital 2026
+- `/2026-antigua/` → edición Antigua 2026
 
-- **Ponentes, biografías y agenda**: objeto `PONENTES` y array `ORDEN`.
-- **Patrocinadores**: array `PATROCINADORES`.
-- **Estilos/colores**: variables en `:root` al inicio de `css/styles.css` (`--azul`, `--teal`, `--verde`, etc.).
-- **Textos fijos** (hero, footer, keynote, guías): directamente en `index.html`.
+## Agregar una edición nueva
 
-Agregar una foto de ponente o un logo de patrocinador es tan simple como poner el archivo en la carpeta correspondiente (`fotos/` o `patrocinadores/`) con el nombre que ya está referenciado en `js/main.js`.
+1. Crea una carpeta con el formato `AAAA-ciudad/` (por ejemplo `2027-xela/`) con su propio `index.html`. Puedes copiar `2026-antigua/` como base.
+2. En el `index.html` de la raíz:
+   - Agrega un `<li class="edicion">` en la lista de ediciones (la más reciente arriba). El atributo `data-fin` es la fecha y hora de cierre; con eso la etiqueta cambia sola de "Próximo" a "Realizado".
+   - Actualiza la sección "Próxima edición" y la fecha `INICIO` de la cuenta regresiva.
+3. Agrega en el footer de la nueva edición un enlace `../` de regreso a la portada.
+
+## Editar la edición de Antigua 2026
+
+- **Agenda, ponentes y fotos:** el array `AGENDA` en `2026-antigua/js/main.js`. Para poner la foto de un ponente, guárdala en `2026-antigua/img/` y escribe la ruta en `foto`; sin foto se muestran sus iniciales.
+- **Colores y tipografías:** variables en `:root` de `2026-antigua/css/estilos.css` (paleta del kit AD21).
 
 ## Ver el sitio localmente
 
 ```bash
-git clone https://github.com/yeffrimic/ArduinoDay2026.git
-cd ArduinoDay2026
 python3 -m http.server 8000
 # abrir http://localhost:8000
 ```
 
 ## Despliegue (GitHub Pages)
 
-El sitio no necesita build: **Settings → Pages → Deploy from a branch → `main` / `root`**. Cada push a `main` se refleja directo en producción.
-
-## Comunidad Arduino Guatemala
-
-Fundada en 2012 por Oscar Leche · Liderada por Yeffri Salazar
-[fb.com/arduinoguatemala](https://fb.com/arduinoguatemala)
+**Settings → Pages → Deploy from a branch → `main` / `root`**. Cada push a `main` se publica directo.
