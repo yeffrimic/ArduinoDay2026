@@ -22,13 +22,13 @@ const AGENDA = [
     titulo: "La Ruta del Chip",
     ponentes: [{ nombre: "Katerine Maldonado", foto: "img/katerine-maldonado.jpg" }],
     org: "Asesora técnica de PRONACOM, Ministerio de Economía",
-    resumen: "La iniciativa país impulsada por el Ministerio de Economía para desarrollar en Guatemala la industria de semiconductores y manufactura de electrónicos."
+    resumen: "La iniciativa país impulsada por el Ministerio de Economía para desarrollar en Guatemala la industria de semiconductores y manufactura electrónica."
   },
   {
     hora: "11:15",
     titulo: "Traducción de LENSEGUA con inteligencia artificial",
     ponentes: [{ nombre: "Libni Josué Barrios Pinto", foto: "img/libni.jpg" }],
-    resumen: "Una app Android que traduce el Lenguaje de Señas de Guatemala con IA, con videollamadas entre personas sordas y oyentes y un modo de texto a seña."
+    resumen: "Una app Android que traduce con IA la Lengua de Señas de Guatemala, con videollamadas entre personas sordas y oyentes y un modo de texto a seña."
   },
   {
     hora: "11:45",
@@ -44,7 +44,7 @@ const AGENDA = [
   },
   {
     hora: "12:45",
-    titulo: "Arduino UNO vs ESP32",
+    titulo: "Arduino UNO vs. ESP32",
     ponentes: [
       { nombre: "Dylan Carlos Yurem Gutiérrez Pacheco", foto: "img/dylan.jpg" },
       { nombre: "Lisandro Mauricio Emanuel Tzunux Tzoc", foto: "img/mauricio.jpg" }
@@ -54,10 +54,10 @@ const AGENDA = [
   { hora: "1:15", tipo: "pausa", titulo: "Refacción", nota: "15 minutos" },
   {
     hora: "1:30",
-    titulo: "Videojuegos",
-    ponentes: [{ nombre: "Conexa", logo: "logos/conexa.png" }],
-    resumen: "Ponente, título y resumen por confirmar.",
-    pendiente: true
+    titulo: "Cómo crear una empresa de videojuegos en Guatemala",
+    ponentes: [{ nombre: "Cinthya Sandoval", foto: "img/cinthya.jpg" }],
+    org: "Fundadora y CEO de Conexa",
+    resumen: "A partir del caso de Bielorrusia y del proyecto Game Fest: cómo Guatemala puede generar PIB impulsando negocios de videojuegos con jóvenes del sector tecnológico."
   },
   {
     hora: "2:00",
@@ -72,7 +72,7 @@ const AGENDA = [
       { nombre: "David Salvador Melara Lemus", foto: "img/david.jpg" },
       { nombre: "José Velásquez", foto: "img/jose.jpg" }
     ],
-    resumen: "Un toolchain open source para programar microcontroladores con e95, un lenguaje tipo TypeScript que se transpila a C++. Con demo en vivo de multitarea en hardware sencillo.",
+    resumen: "Un toolchain de código abierto para programar microcontroladores con e95, un lenguaje tipo TypeScript que se transpila a C++. Con demostración en vivo de multitarea en hardware sencillo.",
     enlace: { url: "https://github.com/davidsal/Embedito95", texto: "Repositorio en GitHub" }
   },
   {
