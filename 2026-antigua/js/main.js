@@ -54,7 +54,7 @@ const AGENDA = [
   { hora: "1:15", tipo: "pausa", titulo: "Refacción", nota: "15 minutos" },
   {
     hora: "1:30",
-    titulo: "Cómo crear una empresa de videojuegos en Guatemala",
+    titulo: "¿Cómo crear una empresa de videojuegos en Guatemala?",
     ponentes: [{ nombre: "Cinthya Sandoval", foto: "img/cinthya.jpg" }],
     org: "Fundadora y CEO de Conexa",
     resumen: "A partir del caso de Bielorrusia y del proyecto Game Fest: cómo Guatemala puede generar PIB impulsando negocios de videojuegos con jóvenes del sector tecnológico."
